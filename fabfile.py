@@ -38,5 +38,6 @@ def build(clean=False):
 
 def deploy():
     build()
-    local('ghp-import -m "Site Updated" %(build_dir)s' % env)
+    env.last_commit = local('git log -1 --oneline', True)
+    local('ghp-import -m "%(last_commit)s" %(build_dir)s' % env)
     local('git push origin gh-pages')
