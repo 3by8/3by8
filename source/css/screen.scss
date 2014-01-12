@@ -60,22 +60,25 @@
 body {
   background: #d4d4d4 url("../images/background.png");
   text-align: center;
-  font-family: sans-serif; }
+  font-family: $stack-sans; }
 
 .page-wrap{
     h1 {
-    color: rgba(0, 0, 0, .3);
-    font-weight: bold;
-    font-size: 32px;
-    letter-spacing: -1px;
-    text-transform: uppercase;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
-    background: url("../images/emblem.png") no-repeat center 100px;
-    padding: 300px 0 10px;
-    margin: 0;
-  }
-
+      color: rgba(0, 0, 0, .3);
+      font-weight: bold;
+      font-size: 32px;
+      letter-spacing: -1px;
+      text-transform: uppercase;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+      margin: 0;
+      .no-svg{
+        background: url("../images/emblem.png") no-repeat center 100px;
+        padding: 300px 0 10px;
+      }
+    }
   .welcome {
-    -webkit-animation-name: welcome;
-    -webkit-animation-duration: .9s; }
+    margin-top: 100px;
+    @include animation-name('welcome');
+    @include animation-duration(.9s);
+  }
 }
