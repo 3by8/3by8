@@ -1,0 +1,37 @@
+---
+title: 3/8 - Showcase - Design and print of custom t-shirt for college and conferences.
+classes: page showcase
+---
+
+<div class="slideshow row">
+    <ul class="large-centered" data-orbit>
+        <% data.event_pics.photographs.each_with_index do |f, index| %>
+        <li>
+          <img src="<%= f.url %>" alt="slide <%= index %>" />
+          <div class="orbit-caption">
+            <%= f.org %>, <%= f.event %>
+          </div>
+        </li>
+        <% end %>
+    </ul>
+</div> <!-- .slideshow -->
+
+<div class="shirt_display row">
+
+  <dl class="sub-nav filters row">
+    <dt>Filter:</dt>
+    <dd class="active"><a href="#" data-filter='*'>All</a></dd>
+    <% data.shirt_display.categories.each_with_index do |f, index| %>
+    <dd><a href='#' data-filter='.<%= f %>'><%= f %></a></dd>
+    <% end %>
+  </dl>
+
+  <div class="container">
+  <% data.shirt_display.photographs.each_with_index do |f, index| %>
+    <div class="item <%= f.type %>">
+      <img style='min-height: 200px; min-width: 300px; max-width: 500px;' src="<%= f.url %>" alt="<%= f.org %>, <%= f.event %>" />
+    </div>
+  <% end %>
+  </div>
+
+</div> <!-- .shirt_display -->

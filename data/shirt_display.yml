@@ -1,0 +1,32 @@
+categories:
+    - full
+    - samples
+
+
+photographs:
+    -   org: Thapar University
+        event: "AKCENT Band"
+        type: full
+        url: https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-prn1/886380_478652512190663_157298432_o.jpg
+        year: 2013
+
+    -   org: TCS
+        event: "Q & A Team"
+        type: full
+        url: https://fbcdn-sphotos-h-a.akamaihd.net/hphotos-ak-ash4/1493392_10201299323953490_2105167157_o.jpg
+
+    -   org: NBCL
+        event: "bio-egicore"
+        type: full
+        url: https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-ash3/1015159_511777212211526_1173808796_o.jpg
+
+    -   org: SMVDU
+        event: "Mechanical Engineering"
+        type: full
+        url: https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-prn1/149288_135924786463439_6380865_n.jpg
+
+    -   org: SMVDU
+        event: none
+        type: samples
+        url: https://scontent-b.xx.fbcdn.net/hphotos-ash3/941416_516334435089137_1364887395_n.jpg
+
