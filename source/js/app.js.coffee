@@ -2,6 +2,7 @@
 #= require ./plugins/foundation/foundation
 #= require ./plugins/foundation/foundation.topbar
 #= require ./plugins/foundation/foundation.orbit
+#= require ./plugins/foundation/foundation.tooltip
 #= require ./plugins/jquery.isotope
 
 #= require_tree ./app
