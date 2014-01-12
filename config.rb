@@ -14,10 +14,10 @@ end
 # Per-page layout changes:
 #
 # With no layout
-# With no layout
 page "robots.txt", :layout => false
 page "humans.txt", :layout => false
 page "CNAME", :layout => false
+page "favicon.ico", :layout => false
 
 #
 # With alternative layout

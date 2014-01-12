@@ -50,6 +50,13 @@
 @include font-face('foundation-icons', '../fonts/foundation-icons');
 @import 'foundation/foundation-icons';
 
+@import '404';
+
+/* =========================================================================
+   Sections
+========================================================================== */
+
+
 body {
   background: #d4d4d4 url("../images/background.png");
   text-align: center;
