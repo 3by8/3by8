@@ -31,14 +31,12 @@ def serve():
     local('bundle exec middleman')
 
 
-def build():
+def build(clean=False):
+    local('rm -rf %(build_dir)s' % env)
     local('bundle exec middleman build --clean --verbose')
 
 
 def deploy():
-    # local('rm -rf %(build_dir)s' % env)
     build()
-    local('git push')
-
-    rsync_project(remote_dir=env.remote_deploy_dir,
-                  local_dir=env.build_dir)
+    local('ghp-import -m "Site Updated" %(build_dir)s' % env)
+    local('git push origin gh-pages')
