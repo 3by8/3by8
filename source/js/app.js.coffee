@@ -1,9 +1,13 @@
 #= require ./plugins/console
+#= require ./plugins/fastclick
+#= require ./plugins/masonry.pkgd.min
+#= require ./plugins/classie
+#= require ./plugins/imagesloaded.js
+#= require ./plugins/anim_on_scroll
 #= require ./plugins/foundation/foundation
 #= require ./plugins/foundation/foundation.topbar
 #= require ./plugins/foundation/foundation.orbit
 #= require ./plugins/foundation/foundation.tooltip
-#= require ./plugins/jquery.isotope
 
 #= require_tree ./app
 
@@ -21,16 +25,8 @@ $(document).foundation({
         }
     })
 
-$shirt_display = $('.showcase .shirt_display')
-$container = $shirt_display.find('.container')
-
-$shirt_display.find('.filters a').click () ->
-  $(this).parent().siblings().removeClass('active')
-  selector = $(this).attr('data-filter')
-  $(this).parent().addClass('active')
-  $container.isotope({ filter: selector })
-  return false;
-
-$container.isotope({
-    masonry: {columnWidth: 500 }
-    })
+new AnimOnScroll(document.getElementById("grid"),
+  minDuration: 0.4
+  maxDuration: 0.7
+  viewportFactor: 0.2
+)
