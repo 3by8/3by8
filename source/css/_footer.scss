@@ -1,0 +1,15 @@
+footer{
+    ul {
+        @include list-inline(5px);
+        @include list-unstyled();
+        font-size: 13px;
+        font-weight: 200;
+        @include link-border-bottom(transparent);
+        a{
+            color: $black;
+            &:hover, &:active {
+                @include link-border-bottom();
+            }
+        }
+    }
+}
